@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net7.0</TargetFramework>
+      <RootNamespace>Highlight_Everything_Revised</RootNamespace>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+    </PropertyGroup>
+  
+    <ItemGroup>
+      <Reference Include="LSLib">
+        <HintPath>D:\Downloads\New folder\ExportTool-v1.18.7\LSLib.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+  </Project>
+  
