@@ -4,6 +4,7 @@ It will pick out .LSF files related items, all located in RootTemplates and Item
 You can broaden the search by removing the search criteria but that just unnecessarily increasing the runtime.  
 It will further narrow down the files based on required modifications which are super parent, existing tooltip and to-excluded map key.  
 It then further narrow down by extracting the objects of interests to be compiled into representative mod files.  
+The code will create mod merged files based on their pathing.  
 Ultimately, it will package and output an zip mod.  
 
 Highlight Everything Revised work on the principle of whitelist by default aka every tooltip is enabled via super parents and removing existing children's tooltip setting to inherent super parents.  
