@@ -21,14 +21,27 @@ class HighlightEverythingRevised
     public static string modUUID = "c2b696cf-e2d3-4c21-a84c-a70b3a0338cf";
     public static string modAuthor = "Lu5ck";
     public static string publishedVersion = "0.1.0.0";
-    public static string currentVersion = "0.3.1.7";
+    public static string currentVersion = "0.3.2.2";
     public static bool debug = true;
 
     static void Main(string[] args)
     {
         List<string> excludeMapKeyList = new List<string>
         {
-            "4cc75168-a81e-4a5c-85cd-1bab8d7bb641", // Helper_Invisible_A
+            "4cc75168-a81e-4a5c-85cd-1bab8d7bb641", // Helper_Invisible_A, some labels in Grymforge
+            "863f03cf-0a6c-41ae-99da-8c5dcd0a23b3", // Helper_Invisible_B, "NOT FOUND" labels in camps
+            //"da1a2696-5ee1-4874-b17b-455adc0a9f10", // Helper_Invisible_D
+            //"0a0c1e0f-60a9-493f-a98b-d761187c7d38", // Helper_Invisible_H
+            //"8277a64b-9046-4d0b-9d89-834ff13526a4", // Helper_Invisible_BlackHole
+            //"49cb4cda-ec8c-47d2-bb51-fef980da6a70", // Helper_Invisible_Summon
+            //"90ec2f64-e124-474c-8b27-a56bba6f6c88", // BASE_PUZ
+            //"06f96d65-0ee5-4ed5-a30a-92a3bfe3f708", // BASE_HELP_Item
+            //"6ba37df5-ee1d-4066-9725-a1432991a3b0", // BASE_DEC_Small
+            //"fc1a8257-5a1a-4dc5-9fe7-cbb46d242e76", // BASE_DEC_Medium
+            //"33a7b36e-6888-49ac-ada5-d77ad7e70dee", // BASE_DEC_Large
+            //"5912447d-0772-43d2-a5f6-9d1b6d682e79", // BASE_DEC_Sittable
+            //"f4ef6926-4f96-43fd-881a-4168297ad0fb", // BASE_BLD_Construction_Big
+            //"de0000ef-9e44-b17b-5d45-4420d0251fb2", // BASE_STATIC_Helper_converted
 
             // Mindflyer Colony Act 2
             "73e3aed3-4188-4fd9-83ea-35599970a579", // S_COL_ElderBrainADs_RapidSpeaker1
@@ -38,16 +51,36 @@ class HighlightEverythingRevised
             "b9abe21f-65ec-434f-a772-00a477fd2296", // S_COL_ElderBrainADs_RapidSpeaker5
             "908287b7-4eff-4fbf-a503-789e22fb3a1a", // S_COL_ElderBrainADs_RapidSpeaker6
 
-            "de0000ef-9e44-b17b-5d45-4420d0251fb2", // BASE_STATIC_Helper_converted
             "603bdf09-f184-4a03-b24e-a43c20d96fde", // Wine Rack overlay
             "a7882d0e-2c3b-47b2-b08e-aea07ae6e72f", // LTS_DUN_Chandelier_Chain_A
             "c8aa8cdd-4e6b-4d5b-adc2-206227766054", // LTS_DUN_Chandelier_Chain_A_Gold
             "b442f5f2-28aa-4b83-a658-88f21d5134dc", // LTS_DUN_Hanging_Bowls_Chain_A
+
+            "943726d7-cc04-4bc8-9f7b-8f8a536fbe10", // DEC_SCL_Shadow_Barrier_A, the statue at Reithwin Town palza
+            "ebb6d9ff-809c-450f-80f0-a90d3eb35280", // DEC_GEN_Statue_Shar_Huge_A_Plate_A, "Dais" label
+
+            // Rosymorn Monastery
+            "d7046d8f-9f23-457e-a0b8-e11a53727691", // BLD_CRE_Roof_Breakable_A_Base, a pillar at Rosymorn Monastery
+            "cf2027d6-d51d-4aac-8907-73a218961096", // BLD_Lathander_Grating_C_4H_Portrait_A, Lathander secret chamber
+            "5b3101eb-93ef-439e-a7d5-ad8996edca8a", // BLD_Lathander_Grating_C_4H_Portrait_B, Lathander secret chamber
+            "e5beff0b-ff4c-42c8-8b51-3c87a5d59cd4", // BLD_Lathander_Grating_C_4H_Portrait_C, Lathander secret chamber
+            "c7cfd415-aa94-4f78-8218-5a37c4993c2b", // PUZ_Lathander_Barrier_Generator_A, Lathander secret chamber 
+            "e7457cb0-2062-410d-87ac-dcc6c12ee880", // PUZ_Lathander_Barrier_Generator_A_Hinges_A, Lathander secret chamber
+            "e6277fd1-c9c9-4167-8760-ce77fa935978", // PUZ_Lathander_Barrier_Generator_A_Top_A, Lathander secret chamber
+
+            // "Statue" label, uninformative labels
             "1bdf275a-10e1-a0aa-8716-ac1cb121fa19", // DEC_GEN_Statue_Ketheric_A_converted, statue near gyrmforge entrance waypoint
-            "943726d7-cc04-4bc8-9f7b-8f8a536fbe10" // DEC_SCL_Shadow_Barrier_A, the statue at Reithwin Town palza
+            "8dbaa7a5-086d-072e-6d41-c62773dd8e27", // DEC_GEN_Statue_Guard_A_converted, the statue at Defiled Temple
+            "e5d6d9c9-655e-e139-1190-dcce805aee1c", // DEC_GEN_Statue_King_A_converted
+            "23d131c2-567f-b278-0d08-f5714050d8f2", // DEC_GEN_Statue_Wizard_A_converted
+            "4aa70e55-f2e4-401c-a56f-49e58e679cac", // UND_StoneFigure
+            "35249a14-25e8-4667-a3d7-b8ef5ed674d3", // DEC_GEN_Statue_Ketheric_A_Gold_Trim_A_Dynamic
+            "ceebe440-fbe9-4b29-a8c4-f4e9a532cecd", //  DEC_GEN_Statue_Ketheric_B
+            
+
         };
 
-        string gamePath = @"D:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data\";
+        string gamePath = @"D:\Games\Baldurs Gate 3\Data\";
         // We sort it by creation date, the patch files will have newer creation date thus loaded last
         string[] pakFilesList = Directory.GetFiles(gamePath).Select(path => new FileInfo(path)).OrderBy(fileInfo => fileInfo.CreationTime).Select(fileInfo => fileInfo.FullName).ToArray();
 
@@ -198,7 +231,7 @@ class HighlightEverythingRevised
                     if (((XmlElement)gameObject.ChildNodes[i]).GetAttribute("id").Trim().Equals("Name"))
                     {
                         string name = ((XmlElement)gameObject.ChildNodes[i]).GetAttribute("value").Trim();
-                        if (name.StartsWith("TimelineTemplate_") || name.StartsWith("CINE_") || name.StartsWith("DEBUG_") || name.StartsWith("TEMP_Cinematic_DONOTUSE_"))
+                        if (name.StartsWith("TimelineTemplate_") || name.StartsWith("CINE_") || name.StartsWith("DEBUG_") || name.StartsWith("TEMP_Cinematic_DONOTUSE_") || name.ToLower().EndsWith("_donotuse") || name.StartsWith("VFX_Script_"))
                         {
                             toAdd = false;
                             break;
